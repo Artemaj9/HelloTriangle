@@ -11,6 +11,8 @@
 		ACBA165D2C123FCE00532AB7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBA165C2C123FCE00532AB7 /* ContentView.swift */; };
 		ACBA165F2C123FCF00532AB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACBA165E2C123FCF00532AB7 /* Assets.xcassets */; };
 		ACBA16622C123FCF00532AB7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACBA16612C123FCF00532AB7 /* Preview Assets.xcassets */; };
+		ACBA16692C12408400532AB7 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBA16682C12408400532AB7 /* Renderer.swift */; };
+		ACBA166C2C124F4900532AB7 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = ACBA166B2C124F4900532AB7 /* Shaders.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,9 @@
 		ACBA165C2C123FCE00532AB7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		ACBA165E2C123FCF00532AB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACBA16612C123FCF00532AB7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		ACBA16682C12408400532AB7 /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+		ACBA166A2C12494A00532AB7 /* definitions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = definitions.h; sourceTree = "<group>"; };
+		ACBA166B2C124F4900532AB7 /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +56,11 @@
 		ACBA16592C123FCE00532AB7 /* HelloTriangle */ = {
 			isa = PBXGroup;
 			children = (
+				ACBA166B2C124F4900532AB7 /* Shaders.metal */,
 				ACBA165A2C123FCE00532AB7 /* HelloTriangleApp.swift */,
+				ACBA166A2C12494A00532AB7 /* definitions.h */,
 				ACBA165C2C123FCE00532AB7 /* ContentView.swift */,
+				ACBA16682C12408400532AB7 /* Renderer.swift */,
 				ACBA165E2C123FCF00532AB7 /* Assets.xcassets */,
 				ACBA16602C123FCF00532AB7 /* Preview Content */,
 			);
@@ -137,7 +145,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACBA166C2C124F4900532AB7 /* Shaders.metal in Sources */,
 				ACBA165D2C123FCE00532AB7 /* ContentView.swift in Sources */,
+				ACBA16692C12408400532AB7 /* Renderer.swift in Sources */,
 				ACBA165B2C123FCE00532AB7 /* HelloTriangleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,6 +298,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Artemaj.HelloTriangle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = HelloTriangle/definitions.h;
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = HelloTriangle/definitions.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -317,6 +329,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Artemaj.HelloTriangle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = HelloTriangle/definitions.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
